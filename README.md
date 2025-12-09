@@ -27,29 +27,32 @@ Le projet adopte une architecture **MVVM** moderne intégrant :
 
 app/
 ├── src/main/java/com/example/studentagenda/
-│ ├── data/
-│ │ ├── CourseDao.java # Interface DAO pour Room
-│ │ ├── CourseDatabase.java # Base Room
-│ │ ├── CourseTypeConverter.java # Convertisseurs
-│ │ └── entity/Course.java # Entité représentant un cours
-│ │
-│ ├── adapter/
-│ │ └── CourseAdapter.java # Adapter RecyclerView
-│ │
-│ ├── ui/
-│ │ ├── MainActivity.java # Écran principal
-│ │ ├── AddEditCourseActivity.java # Ajout / modification
-│ │ ├── CourseDetailActivity.java # Détails d’un cours
-│ │ └── viewmodel/CourseViewModel.java # ViewModel
-│ │
-│ └── notification/
-│ ├── NotificationHelper.java # Configuration des notifications
-│ └── CourseNotificationReceiver.java # Déclenchement des rappels
+│   ├── data/
+│   │   ├── CourseDao.java           # Interface DAO pour Room
+│   │   ├── CourseDatabase.java      # Base Room
+│   │   ├── CourseTypeConverter.java # Convertisseurs
+│   │   └── entity/
+│   │       └── Course.java         # Entité représentant un cours
+│   │
+│   ├── adapter/
+│   │   └── CourseAdapter.java      # Adapter RecyclerView
+│   │
+│   ├── ui/
+│   │   ├── MainActivity.java       # Écran principal
+│   │   ├── AddEditCourseActivity.java # Ajout / modification
+│   │   ├── CourseDetailActivity.java   # Détails d’un cours
+│   │   └── viewmodel/
+│   │       └── CourseViewModel.java   # ViewModel
+│   │
+│   └── notification/
+│       ├── NotificationHelper.java       # Configuration des notifications
+│       └── CourseNotificationReceiver.java # Déclenchement des rappels
 │
 └── res/
-├── layout/ # Interfaces XML
-├── menu/
-└── values/ # Couleurs, thèmes, chaînes
+    ├── layout/   # Interfaces XML
+    ├── menu/     # Menus
+    └── values/   # Couleurs, thèmes, chaînes
+
 
 
 ---
