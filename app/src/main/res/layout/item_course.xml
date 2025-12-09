@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Carte Material pour chaque cours dans la liste -->
+<com.google.android.material.card.MaterialCardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="2dp">
+
+    <!-- Conteneur vertical des informations du cours -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp">
+
+        <!-- En-tête : nom du cours + type (CM/TD/TP) -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="4dp">
+
+            <!-- Nom du cours -->
+            <TextView
+                android:id="@+id/tvCourseName"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/nom_du_cours"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:ellipsize="end"
+                android:textColor="?attr/colorOnSecondary"
+                android:maxLines="1" />
+
+            <!-- Type de cours -->
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/cm"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="11sp"
+                android:textStyle="bold"
+                android:paddingHorizontal="6dp"
+                android:paddingVertical="2dp" />
+
+        </LinearLayout>
+
+        <!-- Professeur -->
+        <TextView
+            android:id="@+id/tvProfessor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/professeur"
+            android:textSize="14sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:layout_marginBottom="2dp"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+        <!-- Jour et horaire du cours -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="2dp">
+
+            <!-- Jour de la semaine -->
+            <TextView
+                android:id="@+id/tvDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lundi"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:background="?attr/colorSecondary"
+                android:textColor="?attr/colorOnSecondary"
+                android:paddingHorizontal="4dp"
+                android:paddingVertical="2dp"
+                android:layout_marginEnd="8dp" />
+
+            <!-- Horaire du cours -->
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/_08_00_10_00"
+                android:textColor="?attr/colorOnSecondary"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <!-- Salle du cours -->
+        <TextView
+            android:id="@+id/tvRoom"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/salle"
+            android:textSize="12sp"
+            android:textColor="?attr/colorOnSecondary"
+            android:ellipsize="end"
+            android:maxLines="1" />
+
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

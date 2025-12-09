@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!-- Item pour accéder aux paramètres de l'application -->
+    <item
+        android:id="@+id/action_settings"
+        android:title="paramètre"
+        android:icon="@drawable/ic_settings"
+        app:showAsAction="never" />
+
+    <!-- Item pour tester une notification (fonctionnalité spécifique) -->
+    <item
+        android:id="@+id/action_test_notification"
+        android:title="Test Notification"
+        app:showAsAction="never" />                <!-- Menu déroulant uniquement -->
+
+    <!-- Item pour supprimer tous les éléments (ex : tous les cours) -->
+    <item
+        android:id="@+id/action_clear_all"
+        android:title="Tout supprimer"
+        android:icon="@drawable/ic_clear"
+        app:showAsAction="never" />                <!-- Menu déroulant uniquement -->
+
+
+    <!-- Item pour tester une notification planifiée -->
+    <item
+        android:id="@+id/action_test_scheduled"
+        android:title="Test Rappel Planifié"
+        app:showAsAction="never" />                <!-- Menu déroulant uniquement -->
+
+
+</menu>

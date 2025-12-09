@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permissions nécessaires pour vibration et notifications -->
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.USE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StudentAgenda"
+        tools:targetApi="31">
+
+        <!-- Activité principale (écran d'accueil de l'application) -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.StudentAgenda">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <!-- Activité pour ajouter/modifier un cours -->
+        <activity
+            android:name=".ui.AddEditCourseActivity"
+            android:exported="false"
+            android:theme="@style/Theme.StudentAgenda" />
+
+        <!-- Activité d'affichage des détails d'un cours -->
+        <activity
+            android:name=".ui.CourseDetailActivity"
+            android:exported="false"
+            android:theme="@style/Theme.StudentAgenda.NoActionBar" />
+
+        <!-- Receiver chargé de déclencher les notifications planifiées -->
+        <receiver
+            android:name=".notification.CourseNotificationReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <!-- Action pour les rappels planifiés de cours -->
+                <action android:name="com.example.studentagenda.ACTION_REMINDER" />
+
+                <!-- Actions pour redémarrer les rappels après un reboot -->
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.QUICKBOOT_POWERON" />
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+
+                <!-- Action pour quand l'app est mise à jour -->
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+            </intent-filter>
+        </receiver>
+
+    </application>
+
+</manifest>

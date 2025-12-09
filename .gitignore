@@ -1,0 +1,24 @@
+# Gradle
+.gradle/
+build/
+
+# Local config
+local.properties
+
+# IDE files
+.idea/
+*.iml
+
+# Log files
+*.log
+
+# Generated files
+captures/
+
+# Android Studio
+.externalNativeBuild/
+.cxx/
+
+# App build
+app/build/
+

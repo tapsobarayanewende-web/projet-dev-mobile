@@ -1,0 +1,96 @@
+<resources>
+    <!-- Noms d'application et actions générales -->
+    <string name="app_name">Agenda Étudiant</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="save">Enregistrer</string>
+    <string name="cancel">Annuler</string>
+    <string name="delete">Supprimer</string>
+    <string name="search_hint">Rechercher un cours…</string>
+
+    <!-- Écran principal et liste -->
+    <string name="no_courses">Aucun cours programmé</string>
+    <string name="add_first_course">Ajoutez votre premier cours</string>
+    <string name="all">Tous</string>
+    <string name="course_information">Informations du cours</string>
+
+    <!-- Actions des cours -->
+    <string name="add_course">Ajouter un cours</string>
+    <string name="edit_course">Modifier le cours</string>
+
+    <!-- Champs du formulaire de cours -->
+    <string name="course_name">Nom du cours</string>
+    <string name="professor_name">Professeur</string>
+    <string name="classroom">Salle</string>
+    <string name="lundi">Lundi</string>
+    <string name="course_type">Type de cours</string>
+    <string name="day_of_week">Jour de la semaine</string>
+    <string name="schedule">Horaires</string>
+    <string name="start_time">Heure de début</string>
+    <string name="end_time">Heure de fin</string>
+
+    <!-- Jours de la semaine -->
+    <string name="monday">Lundi</string>
+    <string name="tuesday">Mardi</string>
+    <string name="wednesday">Mercredi</string>
+    <string name="thursday">Jeudi</string>
+    <string name="friday">Vendredi</string>
+    <string name="saturday">Samedi</string>
+    <string name="sunday">Dimanche</string>
+
+    <!-- Abréviations des jours (si nécessaires pour l'UI) -->
+    <string name="monday_short">Lun</string>
+    <string name="tuesday_short">Mar</string>
+    <string name="wednesday_short">Mer</string>
+    <string name="thursday_short">Jeu</string>
+    <string name="friday_short">Ven</string>
+    <string name="saturday_short">Sam</string>
+    <string name="sunday_short">Dim</string>
+
+    <!-- Notifications -->
+    <string name="enable_notifications">Activer les notifications</string>
+    <string name="enable_reminder_notifications">Activer les notifications de rappel</string>
+    <string name="test_notification">Test de notification</string>
+
+    <!-- Descriptions d'accessibilité -->
+    <string name="search_icon_desc">Rechercher</string>
+    <string name="clear_icon_desc">Effacer</string>
+    <string name="calendar_icon_desc">Calendrier</string>
+    <string name="add_icon_desc">Ajouter</string>
+    <string name="clear_search">Effacer la recherche</string>
+    <!-- Textes avec astérisques (champs obligatoires) -->
+    <string name="course_name_required">Nom du cours *</string>
+    <string name="professor_required">Professeur *</string>
+    <string name="classroom_required">Salle *</string>
+    <string name="start_time_required">Heure de début *</string>
+    <string name="nom_du_cours">Nom du cours</string>
+    <string name="cm">CM</string>
+    <string name="professeur">Professeur</string>
+    <string name="_08_00_10_00">08:00 "-" 10:00</string>
+    <string name="salle">Salle</string>
+    <string name="type_de_cours" />
+    <string name="jour_de_la_semaine" />
+    <string name="horaires" />
+    <string name="heure_de_d_but" />
+    <string name="hh_mm">HH:mm</string>
+    <string name="heure_de_fin">Heure de fin *</string>
+    <string name="activer_les_notifications_de_rappel" />
+    <string name="annuler" />
+    <string name="enregistrer" />
+    <string name="informations_du_cours" />
+
+    <string name="supprimer">Supprimer</string>
+    <string name="modifier">Modifier</string>
+    <string name="d_tails_du_cours">Détails du cours...</string>
+    <string name="informations_d_taill_es">Informations détaillées</string>
+    <string name="ajouter_modifier_cours" />
+    <string name="aucun_cours_programm">Aucun cours programmé</string>
+    <string name="ajoutez_votre_premier_cours_en_cliquant_sur_le_bouton">Ajoutez votre premier cours en cliquant sur le bouton +</string>
+    <string name="rechercher_un_cours">Rechercher un cours...</string>
+    <string name="main_screen_desc" />
+    <string name="day_filters_desc" />
+    <string name="courses_list_desc" />
+    <string name="add_course_button_desc" />
+    <string name="search_field_desc" />
+    <string name="form_content_description">Formulaire de saisie</string>
+
+</resources>

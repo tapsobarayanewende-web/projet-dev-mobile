@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ScrollView pour permettre le défilement si le contenu dépasse l'écran -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true"
+    android:background="?android:attr/colorBackground"
+    android:contentDescription="@string/form_content_description">
+
+    <!-- Conteneur principal vertical -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:baselineAligned="false">
+
+        <!-- AppBar avec MaterialComponents -->
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:theme="@style/ThemeOverlay.MaterialComponents.Dark.ActionBar">
+
+            <!-- Toolbar avec titre et icône de navigation -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:title="@string/add_course"
+                app:titleTextColor="?attr/colorOnPrimary"
+                app:navigationIcon="?android:attr/homeAsUpIndicator" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <!-- CardView pour contenir le formulaire -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:cardBackgroundColor="?attr/colorSurface">
+
+            <!-- Conteneur vertical à l'intérieur de la Card -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:baselineAligned="false">
+
+                <!-- Titre de la section -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_information"
+                    android:textAppearance="?attr/textAppearanceHeadline6"
+                    android:layout_marginBottom="16dp"
+                    android:textColor="?attr/colorPrimary" />
+
+                <!-- Champ Nom du cours -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:minHeight="56dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etCourseName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/course_name"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/text_secondary"
+                        android:maxLines="1"
+                        android:minHeight="48dp"
+                        android:importantForAutofill="yes"
+                        android:autofillHints="text" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Champ Professeur -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:minHeight="56dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etProfessor"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/professor_name"
+                        android:inputType="textCapWords"
+                        android:textColor="@color/text_secondary"
+                        android:maxLines="1"
+                        android:minHeight="48dp"
+                        android:importantForAutofill="yes"
+                        android:autofillHints="name" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Champ Salle -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:minHeight="56dp">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/etRoom"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/classroom"
+                        android:inputType="text"
+                        android:textColor="@color/text_secondary"
+                        android:maxLines="1"
+                        android:minHeight="48dp"
+                        android:importantForAutofill="yes"
+                        android:autofillHints="location" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <!-- Spinner Type de cours -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/course_type"
+                    android:textColor="@color/text_secondary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerType"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="48dp" />
+
+                <!-- Spinner Jour de la semaine -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/day_of_week"
+                    android:textColor="@color/text_secondary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="4dp" />
+
+                <Spinner
+                    android:id="@+id/spinnerDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    android:minHeight="48dp" />
+
+                <!-- Horaires (Début et fin) -->
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/schedule"
+                    android:textColor="@color/text_secondary"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="8dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="16dp"
+                    android:baselineAligned="false">
+
+                    <!-- Heure de début -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginEnd="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:minHeight="56dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etStartTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/start_time"
+                            android:textColor="@color/text_secondary"
+                            android:inputType="time"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:minHeight="48dp"
+                            android:importantForAutofill="yes"
+                            android:autofillHints="time"
+                            tools:ignore="Autofill" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <!-- Heure de fin -->
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_marginStart="8dp"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                        android:minHeight="56dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/etEndTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/end_time"
+                            android:inputType="time"
+                            android:focusable="true"
+                            android:clickable="true"
+                            android:minHeight="48dp"
+                            android:textColor="@color/text_secondary"
+                            android:importantForAutofill="yes"
+                            android:autofillHints="time"
+                            tools:ignore="Autofill,HardcodedText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                </LinearLayout>
+
+                <!-- Notification / Rappel -->
+                <com.google.android.material.switchmaterial.SwitchMaterial
+                    android:id="@+id/switchNotification"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enable_reminder_notifications"
+                    android:textColor="@color/colorOnSecondary"
+                    android:textAppearance="?attr/textAppearanceBody1"
+                    android:checked="true"
+                    android:minHeight="48dp" />
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Boutons Annuler / Sauvegarder -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:paddingTop="8dp"
+            android:baselineAligned="false">
+
+            <!-- Bouton Annuler -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnCancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/cancel"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_marginEnd="8dp"
+                android:minHeight="48dp"
+                android:minWidth="88dp" />
+
+            <!-- Bouton Sauvegarder -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSave"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/save"
+                android:layout_marginStart="8dp"
+                android:minHeight="48dp"
+                android:minWidth="88dp"
+                android:backgroundTint="?attr/colorPrimary"
+                android:textColor="?attr/colorOnPrimary"
+                app:cornerRadius="4dp"
+                app:elevation="2dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
